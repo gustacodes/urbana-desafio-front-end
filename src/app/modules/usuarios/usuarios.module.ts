@@ -4,20 +4,22 @@ import { UsuarioEditarComponent } from './usuario-editar/usuario-editar.componen
 import { UsuarioListaComponent } from './usuario-lista/usuario-lista.component';
 import { UsuarioFormularioComponent } from './usuario-formulario/usuario-formulario.component';
 import { UsuariosRoutingModule } from './usuarios-routing.module';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     UsuarioEditarComponent,
     UsuarioListaComponent,
-    UsuarioFormularioComponent
+    UsuarioFormularioComponent,
   ],
 
   imports: [
     CommonModule,
     UsuariosRoutingModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    ReactiveFormsModule
   ]
   
 })

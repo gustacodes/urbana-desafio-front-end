@@ -22,7 +22,6 @@ export class UsuarioListaComponent {
       this.usuarios = users;
       console.log(this.usuarios);
     });
-  }
-  
+  }  
 
 }
