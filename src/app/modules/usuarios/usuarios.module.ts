@@ -4,7 +4,7 @@ import { UsuarioEditarComponent } from './usuario-editar/usuario-editar.componen
 import { UsuarioListaComponent } from './usuario-lista/usuario-lista.component';
 import { UsuarioFormularioComponent } from './usuario-formulario/usuario-formulario.component';
 import { UsuariosRoutingModule } from './usuarios-routing.module';
-import { Routes } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,9 @@ import { Routes } from '@angular/router';
 
   imports: [
     CommonModule,
-    UsuariosRoutingModule
+    UsuariosRoutingModule,
+    HttpClientModule
+    
   ]
   
 })
