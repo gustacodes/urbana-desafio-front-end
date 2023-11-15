@@ -23,16 +23,6 @@ const routes: Routes = [
     path: 'listar',
     component: UsuarioListaComponent,
   },
-
-  {
-    path: 'remover',
-    component: ModalRemoverComponent,
-  },
-
-  {
-    path: 'cartoes',
-    component: ModalCartoesComponent,
-  }
   
 ];
 

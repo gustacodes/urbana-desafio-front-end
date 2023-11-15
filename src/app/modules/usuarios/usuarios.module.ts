@@ -6,8 +6,7 @@ import { UsuarioFormularioComponent } from './usuario-formulario/usuario-formula
 import { UsuariosRoutingModule } from './usuarios-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ModalRemoverComponent } from '../modals/modal-remover/modal-remover.component';
-import { ModalCartoesComponent } from '../modals/modal-cartoes/modal-cartoes.component';
+import { ModalsModule } from '../modals/modals.module';
 
 
 @NgModule({
@@ -15,15 +14,14 @@ import { ModalCartoesComponent } from '../modals/modal-cartoes/modal-cartoes.com
     UsuarioEditarComponent,
     UsuarioListaComponent,
     UsuarioFormularioComponent,
-    ModalRemoverComponent,
-    ModalCartoesComponent
   ],
 
   imports: [
     CommonModule,
     UsuariosRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ModalsModule
   ]
   
 })

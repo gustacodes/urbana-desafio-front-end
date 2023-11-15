@@ -34,7 +34,6 @@ export class UsuarioListaComponent {
   listaUsuarios() {
     this.usuarioService.listaUsuarios().subscribe(users => {
       this.usuarios = users;
-      console.log(this.usuarios);
     });
   }  
 
