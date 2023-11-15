@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Usuario } from 'src/app/interfaces/Usuario';
+import { UsuariosService } from '../../usuarios/usuarios.service';
 
 @Component({
   selector: 'app-modal-remover',
@@ -10,9 +12,13 @@ export class ModalRemoverComponent {
 
   @Input() usuario?: Usuario
   @Output() removerUsuario = new EventEmitter<void>();
+  users?: Usuario []
 
-  // Método para confirmar a remoção
+  constructor() {}
+
   confirmarRemocao() {
     this.removerUsuario.emit();
   }
+
+
 }

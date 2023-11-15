@@ -18,16 +18,14 @@ export class UsuarioListaComponent {
   ngOnInit() {    
     this.listaUsuarios()
   }
-
-  // Método para selecionar o usuário antes de remover
+  
   selecionarUsuario(usuario: Usuario) {
     this.usuarioSelecionado = usuario;
   }
   
-  // Método para remover o usuário (pode ser acionado pelo modal)
   removerUsuario() {
     this.usuarioService.removerUsuario(this.usuarioSelecionado?.id).subscribe(() => {
-      this.router.navigate(['/usuarios/listar'])
+      this.listaUsuarios();
     })
   }
 
