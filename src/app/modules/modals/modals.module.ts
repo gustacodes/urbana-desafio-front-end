@@ -3,25 +3,28 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ModalsRoutingModule } from './modals-routing.module';
-import { ModalCartoesComponent } from './modal-cartoes/modal-cartoes.component';
-import { ModalRemoverComponent } from './modal-remover/modal-remover.component';
+import { ModalCartoesComponent } from './modal-cartoes-listar/modal-cartoes.component';
+import { ModalRemoverUsuarioComponent } from './modal-remover-usuario/modal-remover.component';
+import { ModalNovoCartaoComponent } from './modal-novo-cartao/modal-novo-cartao.component';
 
 @NgModule({
   declarations: [
     ModalCartoesComponent,
-    ModalRemoverComponent
+    ModalRemoverUsuarioComponent,
+    ModalNovoCartaoComponent
   ],
 
   imports: [
     CommonModule,
     HttpClientModule,
     ReactiveFormsModule,
-    ModalsRoutingModule
+    ModalsRoutingModule,
   ],
 
   exports: [
     ModalCartoesComponent,
-    ModalRemoverComponent
+    ModalRemoverUsuarioComponent,
+    ModalNovoCartaoComponent
   ]
 
 })

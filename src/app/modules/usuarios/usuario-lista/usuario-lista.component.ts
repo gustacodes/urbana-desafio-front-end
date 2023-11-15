@@ -1,4 +1,4 @@
-import { Component, numberAttribute } from '@angular/core';
+import { Component } from '@angular/core';
 import { UsuariosService } from '../usuarios.service';
 import { Usuario } from 'src/app/interfaces/Usuario';
 import { Router } from '@angular/router';
@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './usuario-lista.component.html',
   styleUrls: ['./usuario-lista.component.css']
 })
+
 export class UsuarioListaComponent {
 
   usuarios: Usuario [] = []

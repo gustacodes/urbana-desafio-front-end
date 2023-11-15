@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Cartao } from 'src/app/interfaces/Cartao';
 import { Usuario } from 'src/app/interfaces/Usuario';
 import { environment } from 'src/environments/enviroment';
 

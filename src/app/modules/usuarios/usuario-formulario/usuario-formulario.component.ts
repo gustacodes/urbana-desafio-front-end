@@ -47,8 +47,6 @@ export class UsuarioFormularioComponent {
     },
 
     (error) => {
-      console.log(this.formulario.value);
-      
       alert('Falha ao cadastrar usuario' + JSON.stringify(error));
     }
 
