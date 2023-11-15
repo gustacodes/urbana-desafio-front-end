@@ -21,4 +21,8 @@ export class UsuariosService {
     return this.http.post<Usuario>(`${this.URL}/usuarios`, usuario);
   }
 
+  removerUsuario(id?:number) {
+    return this.http.delete<Usuario>(`${this.URL}/usuarios/remove/${id}`)
+  }
+
 }

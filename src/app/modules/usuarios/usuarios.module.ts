@@ -6,6 +6,7 @@ import { UsuarioFormularioComponent } from './usuario-formulario/usuario-formula
 import { UsuariosRoutingModule } from './usuarios-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ModalRemoverComponent } from '../modals/modal-remover/modal-remover.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     UsuarioEditarComponent,
     UsuarioListaComponent,
     UsuarioFormularioComponent,
+    ModalRemoverComponent
   ],
 
   imports: [

@@ -24,7 +24,23 @@ export class UsuarioFormularioComponent {
 
   }
 
+  get nome() {
+    return this.formulario.get('nome')!;
+  }
+
+  get email() {
+    return this.formulario.get('email')!;
+  }
+
+  get senha() {
+    return this.formulario.get('senha')!;
+  }
+
   salvarUsuario() {
+
+    if(this.formulario.invalid) {
+      return;
+    }
 
     this.usuarioService.salvarUsuario(this.formulario.value).subscribe((usuario) => {
       this.route.navigate(['usuarios/listar'])
@@ -38,7 +54,5 @@ export class UsuarioFormularioComponent {
 
     )
   }
-
-
 
 }
