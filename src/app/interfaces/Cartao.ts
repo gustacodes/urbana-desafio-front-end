@@ -4,5 +4,6 @@ import { TipoCartao } from '../enums/TipoCartao';
 export class Cartao {
     numero_cartao!: number
     nome!: string
-    tipo?: TipoCartao
+    status!: boolean 
+    tipoCartao?: TipoCartao
 }

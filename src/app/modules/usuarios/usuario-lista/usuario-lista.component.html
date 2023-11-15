@@ -2,12 +2,14 @@
 
 <div class="container">
   <app-modal-remover [usuario]="usuarioSelecionado" (removerUsuario)="removerUsuario()"></app-modal-remover>
+  <app-modal-cartoes [usuario]="usuarioSelecionado"></app-modal-cartoes>
   <table class="table table-striped">
     <thead>
       <tr>
         <th scope="col">Nome</th>
         <th scope="col">E-mail</th>
-        <th scope="col">Ações</th>
+        <th scope="col">Gerenciar</th>
+        
       </tr>
     </thead>
     <tbody *ngFor="let usuario of usuarios; let i = index">
@@ -18,12 +20,14 @@
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Ações
+                Ações
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" routerLink="/usuarios/cadastrar">Novo cartão</a>
-              <a class="dropdown-item" href="#">Editar</a>
+              
+              <a class="dropdown-item" href="#" >Editar</a>
               <a class="dropdown-item" data-toggle="modal" data-target="#modal" href="#" (click)="selecionarUsuario(usuario)">Remover</a>
+              <a class="dropdown-item" data-toggle="modal" data-target="#modalR" href="#" (click)="selecionarUsuario(usuario)">Cartões</a>
+              
             </div>
           </div>
         </td>

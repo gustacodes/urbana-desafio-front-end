@@ -1,5 +1,5 @@
 export enum TipoCartao {
-    COMUM = 'COMUN',
+    COMUM = 'COMUM',
     ESTUDANTE = 'ESTUDANTE',
     TRABALHADOR = 'TRABALHADOR'
 }
