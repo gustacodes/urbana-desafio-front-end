@@ -14,7 +14,7 @@ export class UsuarioListaComponent {
   usuarios: Usuario [] = []
   usuarioSelecionado?: Usuario;
 
-  constructor(private usuarioService: UsuariosService, private router: Router) {}
+  constructor(private usuarioService: UsuariosService) {}
 
   ngOnInit() {    
     this.listaUsuarios()
@@ -26,7 +26,7 @@ export class UsuarioListaComponent {
   
   removerUsuario() {
     this.usuarioService.removerUsuario(this.usuarioSelecionado?.id).subscribe(() => {
-      this.listaUsuarios();
+      location.reload();
     })
   }
 

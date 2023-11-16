@@ -20,7 +20,11 @@ export class ModalsService {
   }
 
   desativarCartao(id?: number, numero?: number) {
-    return this.http.put(`${this.URL}/usuarios/cartao/${id}/status/${numero}`, undefined);
+    return this.http.put(`${this.URL}/usuarios/${id}/status/${numero}`, undefined);
+  }
+
+  removerCartao(id?:number) {
+    return this.http.delete(`${this.URL}/usuarios/remover-cartao/${id}`)
   }
 
 }

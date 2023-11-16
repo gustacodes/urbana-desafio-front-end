@@ -16,8 +16,14 @@ export class ModalCartoesComponent {
 
   statusCartao(id?: number, numero?: number) {
     this.service.desativarCartao(id, numero).subscribe((status) => {
-      alert('Status Atualizado')
+      location.reload()
     })
   }
+
+  removerCartao(id?: number) {
+    this.service.removerCartao(id).subscribe(() => {
+      location.reload()
+    })
+  } 
 
 }

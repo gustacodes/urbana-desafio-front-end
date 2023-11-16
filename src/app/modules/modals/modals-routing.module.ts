@@ -16,7 +16,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'cartao/novo',
+    path: 'cartao',
     component: ModalNovoCartaoComponent
   }
   

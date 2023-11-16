@@ -34,8 +34,8 @@ export class ModalNovoCartaoComponent {
       return
     }
 
-    this.modalsService.novoCartao(this.idUsuario, this.formulario?.value).subscribe((cartao) => {
-
+    this.modalsService.novoCartao(this.idUsuario, this.formulario?.value).subscribe(() => {
+      location.reload()
     },
 
       (error) => {

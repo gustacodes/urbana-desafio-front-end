@@ -34,7 +34,7 @@
                             <ng-template #desativado>
                                 <button type="submit" class="btn btn-success" (click)="statusCartao(usuario?.id, cartao.numero_cartao)">Ativar Cartão</button> 
                             </ng-template>
-                            <button type="submit" class="btn btn-danger">Remover Cartão</button>
+                            <button type="submit" class="btn btn-danger" (click)="removerCartao(cartao.id)">Remover Cartão</button>
                         </div>
     
                     </div>
