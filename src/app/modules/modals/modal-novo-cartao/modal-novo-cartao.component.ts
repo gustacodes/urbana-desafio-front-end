@@ -20,14 +20,27 @@ export class ModalNovoCartaoComponent {
     });
   }
 
+  get nome() {
+    return this.formulario.get('nome')!;
+  }
+
+  get tipoCartao() {
+    return this.formulario.get('tipoCartao')!;
+  }
+
   salvarCartao() {
+
+    if (this.formulario.invalid) {
+      return
+    }
+
     this.modalsService.novoCartao(this.idUsuario, this.formulario?.value).subscribe((cartao) => {
-      
+
     },
 
-    (error) => {      
-      alert('Falha ao adicionar cartão' + JSON.stringify(error));
-    }
+      (error) => {
+        alert('Falha ao adicionar cartão' + JSON.stringify(error));
+      }
     )
   }
 
