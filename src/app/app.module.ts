@@ -7,6 +7,8 @@ import { UsuariosModule } from './modules/usuarios/usuarios.module';
 import { CommonModule } from '@angular/common';
 import { ModalsModule } from './modules/modals/modals.module';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -19,4 +19,8 @@ export class ModalsService {
     return this.http.put<Usuario>(`${this.URL}/usuarios/novo/${id}`, cartao);
   }
 
+  desativarCartao(id?: number, numero?: number) {
+    return this.http.put(`${this.URL}/usuarios/cartao/${id}/status/${numero}`, undefined);
+  }
+
 }

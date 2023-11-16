@@ -6,6 +6,7 @@ import { ModalsRoutingModule } from './modals-routing.module';
 import { ModalCartoesComponent } from './modal-cartoes-listar/modal-cartoes.component';
 import { ModalRemoverUsuarioComponent } from './modal-remover-usuario/modal-remover.component';
 import { ModalNovoCartaoComponent } from './modal-novo-cartao/modal-novo-cartao.component';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ModalNovoCartaoComponent } from './modal-novo-cartao/modal-novo-cartao.
     HttpClientModule,
     ReactiveFormsModule,
     ModalsRoutingModule,
+    ScrollingModule
   ],
 
   exports: [

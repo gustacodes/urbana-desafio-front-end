@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Usuario } from 'src/app/interfaces/Usuario';
+import { ModalsService } from '../modals.service';
 
 @Component({
   selector: 'app-modal-cartoes',
@@ -11,5 +12,12 @@ export class ModalCartoesComponent {
 
   @Input() usuario?: Usuario;
 
+  constructor(private service: ModalsService) { }
+
+  statusCartao(id?: number, numero?: number) {
+    this.service.desativarCartao(id, numero).subscribe((status) => {
+      alert('Status Atualizado')
+    })
+  }
 
 }
