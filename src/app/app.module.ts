@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { UsuariosModule } from './modules/usuarios/usuarios.module';
 import { CommonModule } from '@angular/common';
 import { ModalsModule } from './modules/modals/modals.module';
+import { HeaderComponent } from './modules/header/header.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
   ],
 
   imports: [

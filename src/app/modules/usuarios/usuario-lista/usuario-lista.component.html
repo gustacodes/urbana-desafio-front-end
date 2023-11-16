@@ -1,38 +1,42 @@
 <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
 
-<div class="container">
-  <app-modal-remover [usuario]="usuarioSelecionado" (removerUsuario)="removerUsuario()"></app-modal-remover>
-  <app-modal-cartoes [usuario]="usuarioSelecionado"></app-modal-cartoes>
+<app-modal-remover [usuario]="usuarioSelecionado" (removerUsuario)="removerUsuario()"></app-modal-remover>
+<app-modal-cartoes [usuario]="usuarioSelecionado"></app-modal-cartoes>
+<app-usuario-editar [usuario]="usuarioSelecionado"></app-usuario-editar>
 
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">Nome</th>
-        <th scope="col">E-mail</th>
-        <th scope="col">Gerenciar</th>
-        
-      </tr>
-    </thead>
-    <tbody *ngFor="let usuario of usuarios">
-      <tr>
-        <td>{{usuario.nome}}</td>
-        <td>{{usuario.email}}</td>
-        <td>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Ações
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              
-              <a class="dropdown-item" href="#" >Editar</a>
-              <a class="dropdown-item" data-toggle="modal" data-target="#modal" href="#" (click)="selecionarUsuario(usuario)">Remover</a>
-              <a class="dropdown-item" data-toggle="modal" data-target="#modalR" href="#" (click)="selecionarUsuario(usuario)">Cartões</a>
-              
-            </div>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Gerenciar</th>
+
+    </tr>
+  </thead>
+  <tbody *ngFor="let usuario of usuarios">
+    <tr>
+      <td>{{usuario.nome}}</td>
+      <td>{{usuario.email}}</td>
+      <td>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Ações
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+            <a class="dropdown-item" data-toggle="modal" data-target="#modalForm" href="#"
+            (click)="selecionarUsuario(usuario)">Editar</a>
+            <a class="dropdown-item" data-toggle="modal" data-target="#modal" href="#"
+              (click)="selecionarUsuario(usuario)">Remover</a>
+            <a class="dropdown-item" data-toggle="modal" data-target="#modalR" href="#"
+              (click)="selecionarUsuario(usuario)">Cartões</a>
+
           </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

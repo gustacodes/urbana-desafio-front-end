@@ -11,7 +11,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <cdk-virtual-scroll-viewport itemSize="150" style="height: 550px;">
+                <cdk-virtual-scroll-viewport itemSize="50" style="height: 350px;">
                     <div class="modal-body" *cdkVirtualFor="let cartao of usuario?.cartao">
                         <h5><strong>Nome: </strong>
                             <p>{{cartao.nome}}</p>
@@ -35,6 +35,7 @@
                                 <button type="submit" class="btn btn-success" (click)="statusCartao(usuario?.id, cartao.numero_cartao)">Ativar Cartão</button> 
                             </ng-template>
                             <button type="submit" class="btn btn-danger" (click)="removerCartao(cartao.id)">Remover Cartão</button>
+                            
                         </div>
     
                     </div>

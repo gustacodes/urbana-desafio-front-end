@@ -26,4 +26,8 @@ export class UsuariosService {
     return this.http.delete<Usuario>(`${this.URL}/usuarios/remove/${id}`)
   }
 
+  atualizarUsuario(id?: number, usuario?: Usuario) {
+    return this.http.put<Usuario>(`${this.URL}/usuarios/${id}`, usuario)
+  }
+
 }

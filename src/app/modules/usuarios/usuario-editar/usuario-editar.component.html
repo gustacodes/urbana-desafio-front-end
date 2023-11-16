@@ -1,1 +1,30 @@
-<p>usuario-editar works!</p>
+<div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <label class="modal-title fs-2" id="exampleModalLabel">Atualizar dados</label>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form" (ngSubmit)="atualizarUsuario(usuario?.id)">
+          <div class="mb-3">
+            <h1 for="recipient-name" class="col-form-label">Nome:</h1>
+            <input type="text" formControlName="nome" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <h1 for="message-text" class="col-form-label">E-mail:</h1>
+            <input type="email" formControlName="email" class="form-control" id="recipient-email"/>
+          </div>
+          <div class="mb-3">
+            <h1 for="message-text" class="col-form-label">Senha:</h1>
+            <input type="password" formControlName="senha" class="form-control" id="recipient-senha"/>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Atualizar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
