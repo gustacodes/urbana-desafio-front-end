@@ -1,8 +1,8 @@
-<div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalCriar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
       <div class="modal-content">
           <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel"><strong>Novo Cartão</strong></h1>
+            <label class="modal-title fs-2" id="exampleModalLabel">Novo Usuário</label>
               <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -12,7 +12,7 @@
                       <input type="text" class="form-control" id="recipient-name" formControlName="nome"
                           placeholder="Nome do usuário">
                           <div class="erro-validacao" *ngIf="nome.invalid && formDir.submitted">
-                              <p>Nome do cartão é obrigatório.</p>
+                              <p>Nome do usuário é obrigatório.</p>
                             </div>
                   </div>
                   <div class="mb-3">
@@ -32,10 +32,14 @@
                           </div>
                 </div>
                   <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                       <button type="submit" class="btn btn-success">Cadastrar</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                   </div>
+                  
               </form>
+              <div *ngIf="cadastrado" style="text-align: center;" class="alert alert-success" role="alert">
+                Usuário cadastrado com sucesso.
+              </div>
           </div>
       </div>
   </div>

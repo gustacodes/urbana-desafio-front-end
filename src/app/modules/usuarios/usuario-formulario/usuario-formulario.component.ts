@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class UsuarioFormularioComponent {
 
   formulario!: FormGroup;
+  cadastrado: boolean = false
 
   constructor(private usuarioService: UsuariosService, private route: Router, private formBuilder: FormBuilder) {
     this.formulario = this.formBuilder.group({
@@ -38,17 +39,21 @@ export class UsuarioFormularioComponent {
 
   salvarUsuario() {
 
-    if(this.formulario.invalid) {
+    if (this.formulario.invalid) {
       return;
     }
 
-    this.usuarioService.salvarUsuario(this.formulario.value).subscribe((usuario) => {
-      location.reload()
+    this.usuarioService.salvarUsuario(this.formulario.value).subscribe(() => {
+
+      this.cadastrado = true;
+      setTimeout(() => {
+        location.reload()
+      }, 2000);
     },
 
-    (error) => {
-      alert('Falha ao cadastrar usuario' + JSON.stringify(error));
-    }
+      (error) => {
+        alert('Falha ao cadastrar usuario' + JSON.stringify(error));
+      }
 
     )
   }
