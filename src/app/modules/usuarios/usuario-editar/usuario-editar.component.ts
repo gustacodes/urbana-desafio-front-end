@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Usuario } from 'src/app/interfaces/Usuario';
 import { UsuariosService } from '../usuarios.service';
 
@@ -14,16 +14,12 @@ export class UsuarioEditarComponent {
   form!: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private service: UsuariosService) {
-
-    //Falta arrumar para que os campos que estiverem em branco, setar os dados já existentes e alterar apenas os campos inseridos
+    
     this.form = formBuilder.group({
 
-      nome: new FormControl('', [Validators.required]
-      ),
-      email: new FormControl('', [Validators.required]
-      ),
-      senha: new FormControl('', [Validators.required]
-      ),
+      nome: new FormControl(),
+      email: new FormControl(),
+      senha: new FormControl(),
 
     })
 

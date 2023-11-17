@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { UsuariosService } from '../usuarios.service';
 import { Usuario } from 'src/app/interfaces/Usuario';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-usuario-lista',

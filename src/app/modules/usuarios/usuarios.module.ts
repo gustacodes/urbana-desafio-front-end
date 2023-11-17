@@ -22,7 +22,9 @@ import { ModalsModule } from '../modals/modals.module';
     HttpClientModule,
     ReactiveFormsModule,
     ModalsModule
-  ]
+  ],
+
+  exports: [UsuarioFormularioComponent]
   
 })
 

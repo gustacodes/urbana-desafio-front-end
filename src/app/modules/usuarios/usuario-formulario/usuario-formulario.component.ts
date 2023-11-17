@@ -43,7 +43,7 @@ export class UsuarioFormularioComponent {
     }
 
     this.usuarioService.salvarUsuario(this.formulario.value).subscribe((usuario) => {
-      this.route.navigate(['usuarios/listar'])
+      location.reload()
     },
 
     (error) => {

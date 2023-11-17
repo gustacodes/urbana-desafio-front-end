@@ -6,30 +6,34 @@
               <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-              <form [formGroup]="formulario" #formDir="ngForm">
+              <form [formGroup]="formulario" (ngSubmit)="salvarUsuario()" #formDir="ngForm">
                   <div class="mb-3">
                       <label for="recipient-name" class="col-form-label">Nome:</label>
                       <input type="text" class="form-control" id="recipient-name" formControlName="nome"
-                          placeholder="Nome do cartão">
+                          placeholder="Nome do usuário">
                           <div class="erro-validacao" *ngIf="nome.invalid && formDir.submitted">
                               <p>Nome do cartão é obrigatório.</p>
                             </div>
                   </div>
                   <div class="mb-3">
-                      <label for="message-text" class="col-form-label">Tipo:</label>
-                      <select class="form-select" formControlName="tipoCartao" aria-label="Default select example">
-                          <option selected hidden="false">Tipo</option>
-                          <option value="COMUM">COMUM</option>
-                          <option value="ESTUDANTE">ESTUDANTE</option>
-                          <option value="TRABALHADOR">TRABALHADOR</option>
-                      </select>
-                      <div class="erro-validacao" >
-                          <p>Tipo do cartão é obrigatório.</p>
-                        </div>
-                  </div>
+                    <label for="recipient-email" class="col-form-label">E-mail:</label>
+                    <input type="text" class="form-control" id="recipient-email" formControlName="email"
+                        placeholder="E-mail">
+                        <div class="erro-validacao" *ngIf="email.invalid && formDir.submitted">
+                            <p>E-mail é obrigatório.</p>
+                          </div>
+                </div>
+                <div class="mb-3">
+                    <label for="recipient-senha" class="col-form-label">Senha:</label>
+                    <input type="password" class="form-control" id="recipient-senha" formControlName="senha"
+                        placeholder="Senha">
+                        <div class="erro-validacao" *ngIf="senha.invalid && formDir.submitted">
+                            <p>Senha é obrigatória.</p>
+                          </div>
+                </div>
                   <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                      <button type="submit" class="btn btn-success">Criar</button>
+                      <button type="submit" class="btn btn-success">Cadastrar</button>
                   </div>
               </form>
           </div>
