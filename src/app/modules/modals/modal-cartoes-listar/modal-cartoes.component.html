@@ -12,12 +12,12 @@
                     </button>
                 </div>
                 <cdk-virtual-scroll-viewport itemSize="50" style="height: 350px;">
-                    <div class="modal-body" *cdkVirtualFor="let cartao of usuario?.cartao">
+                    <div class="modal-body" *cdkVirtualFor="let cartao of usuario?.cartoes">
                         <h5><strong>Nome: </strong>
                             <p>{{cartao.nome}}</p>
                         </h5>
                         <h5><strong>Número: </strong>
-                            <p>{{cartao.numero_cartao}}</p>
+                            <p>{{cartao.numeroCartao}}</p>
                         </h5>
                         <h5><strong>Tipo: </strong>
                             <p>{{cartao.tipoCartao}}</p>
@@ -30,11 +30,11 @@
                             </ng-template>
                         </h5>
                         <div class="botao-cartao">
-                            <button type="submit" class="btn btn-warning" *ngIf="cartao.status; else desativado" (click)="statusCartao(usuario?.id, cartao.numero_cartao)">Desativar Cartão</button>
+                            <button type="submit" class="btn btn-warning" *ngIf="cartao.status; else desativado" (click)="statusCartao(usuario?.id, cartao.id)">Desativar Cartão</button>
                             <ng-template #desativado>
-                                <button type="submit" class="btn btn-success" (click)="statusCartao(usuario?.id, cartao.numero_cartao)">Ativar Cartão</button> 
+                                <button type="submit" class="btn btn-success" (click)="statusCartao(usuario?.id, cartao.id)">Ativar Cartão</button> 
                             </ng-template>
-                            <button type="submit" class="btn btn-danger" (click)="removerCartao(cartao.id)">Remover Cartão</button>
+                            <button type="submit" class="btn btn-danger" (click)="removerCartao(usuario?.id, cartao.id)">Remover Cartão</button>
                             
                         </div>
     

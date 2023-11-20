@@ -2,7 +2,7 @@
 import { TipoCartao } from '../enums/TipoCartao';
 
 export class Cartao {
-    numero_cartao!: number
+    numeroCartao!: number
     nome!: string
     status!: boolean 
     tipoCartao?: TipoCartao

@@ -22,7 +22,7 @@ export class UsuariosService {
   }
 
   removerUsuario(id?:number) {
-    return this.http.delete<Usuario>(`${this.URL}/usuarios/remove/${id}`)
+    return this.http.delete<Usuario>(`${this.URL}/usuarios/${id}`)
   }
 
   atualizarUsuario(id?: number, usuario?: Usuario) {

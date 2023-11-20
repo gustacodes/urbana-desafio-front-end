@@ -14,14 +14,14 @@ export class ModalCartoesComponent {
 
   constructor(private service: ModalsService) { }
 
-  statusCartao(id?: number, numero?: number) {
-    this.service.desativarCartao(id, numero).subscribe((status) => {
+  statusCartao(id?: number, idCartao?: number) {
+    this.service.alterarStatusDoCartao(id, idCartao).subscribe((status) => {
       location.reload()
     })
   }
 
-  removerCartao(id?: number) {
-    this.service.removerCartao(id).subscribe(() => {
+  removerCartao(id?: number, idCartao?: number) {
+    this.service.removerCartao(id, idCartao).subscribe(() => {
       location.reload()
     })
   } 

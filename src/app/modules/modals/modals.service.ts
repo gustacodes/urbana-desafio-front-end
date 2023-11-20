@@ -16,15 +16,15 @@ export class ModalsService {
 
 
   novoCartao(id?: number, cartao?: Cartao) {
-    return this.http.put<Usuario>(`${this.URL}/usuarios/novo/${id}`, cartao);
+    return this.http.post<Usuario>(`${this.URL}/usuarios/${id}/cartoes`, cartao);
   }
 
-  desativarCartao(id?: number, numero?: number) {
-    return this.http.put(`${this.URL}/usuarios/${id}/status/${numero}`, undefined);
+  alterarStatusDoCartao(id?: number, idCartao?: number) {
+    return this.http.patch(`${this.URL}/usuarios/${id}/cartoes/${idCartao}/status`, undefined);
   }
 
-  removerCartao(id?:number) {
-    return this.http.delete(`${this.URL}/usuarios/remover-cartao/${id}`)
+  removerCartao(id?:number, idCartao?: number) {
+    return this.http.delete(`${this.URL}/usuarios/${id}/cartoes/${idCartao}`)
   }
 
 }
