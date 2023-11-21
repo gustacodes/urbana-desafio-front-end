@@ -10,7 +10,7 @@ const routes: Routes = [
 
   {
     path: 'cartoes',
-    loadChildren: () => import('./modules/modals/modals.module').then((m) => m.ModalsModule),
+    loadChildren: () => import('./modules/cartoes/cartoes.module').then((c) => c.CartoesModule),
   }
 
 ];
@@ -19,5 +19,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-
+ 
 export class AppRoutingModule { }

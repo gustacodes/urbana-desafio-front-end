@@ -1,0 +1,30 @@
+<app-usuario-formulario></app-usuario-formulario>
+<link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Número</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let cartao of cartoes">
+    <tr>
+      <td>{{cartao.nome}}</td>
+      <td>{{cartao.numeroCartao}}</td>
+      <td>{{cartao.tipoCartao}}</td>
+      <td>
+        <strong><p *ngIf="cartao.status; else inativo" style="color: green;">ATIVO</p></strong>
+        <ng-template #inativo>
+          <p style="color: red;"><strong>INATIVO</strong></p>
+      </ng-template>
+    </td>
+      <td>
+      </td>
+    </tr>
+  </tbody>
+</table>

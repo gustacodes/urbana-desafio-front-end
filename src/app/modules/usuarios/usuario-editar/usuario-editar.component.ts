@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Usuario } from 'src/app/interfaces/Usuario';
 import { UsuariosService } from '../usuarios.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-usuario-editar',
@@ -24,6 +25,8 @@ export class UsuarioEditarComponent {
     })
 
   }
+
+  ngOnInit() { }
 
   atualizarUsuario(id?: number) {
 

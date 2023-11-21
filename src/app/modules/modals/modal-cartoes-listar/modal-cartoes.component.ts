@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Usuario } from 'src/app/interfaces/Usuario';
 import { ModalsService } from '../modals.service';
+import { Cartao } from 'src/app/interfaces/Cartao';
 
 @Component({
   selector: 'app-modal-cartoes',
@@ -11,6 +12,7 @@ import { ModalsService } from '../modals.service';
 export class ModalCartoesComponent {
 
   @Input() usuario?: Usuario;
+  cartoes: Cartao [] = []
 
   constructor(private service: ModalsService) { }
 
