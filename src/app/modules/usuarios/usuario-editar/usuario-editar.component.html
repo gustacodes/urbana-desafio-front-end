@@ -7,7 +7,7 @@
       </div>
       <div class="modal-body">
         <label>Usuário: </label><p>{{usuario?.nome}}</p>
-        <form [formGroup]="form" (ngSubmit)="atualizarUsuario(usuario?.id)">
+        <form [formGroup]="form" #formDir="ngForm" (ngSubmit)="atualizarUsuario(usuario?.id)">
           <div class="mb-3">
             <h1 for="recipient-text" class="col-form-label">Nome:</h1>
             <input type="text" formControlName="nome" class="form-control" id="recipient-name">
@@ -15,6 +15,9 @@
           <div class="mb-3">
             <h1 for="message-text" class="col-form-label">E-mail:</h1>
             <input type="email" formControlName="email" class="form-control" id="recipient-email"/>
+            <div class="erro-validacao" *ngIf="emailEmUso && formDir.submitted">
+              <p>E-mail já cadastrado no sistema.</p>
+            </div>
           </div>
           <div class="mb-3">
             <h1 for="message-text" class="col-form-label">Senha:</h1>

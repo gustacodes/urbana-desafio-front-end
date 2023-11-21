@@ -13,9 +13,9 @@ export class UsuarioEditarComponent {
 
   @Input() usuario?: Usuario
   form!: FormGroup;
+  emailEmUso?: boolean
 
-  constructor(private formBuilder: FormBuilder, private service: UsuariosService) {
-    
+  constructor(private formBuilder: FormBuilder, private service: UsuariosService) {    
     this.form = formBuilder.group({
 
       nome: new FormControl(),
@@ -23,7 +23,6 @@ export class UsuarioEditarComponent {
       senha: new FormControl(),
 
     })
-
   }
 
   ngOnInit() { }
@@ -35,7 +34,7 @@ export class UsuarioEditarComponent {
     },
 
       (error) => {
-        alert('Falha ao atualizar' + JSON.stringify(error))
+        this.emailEmUso = true;
       }
 
     )

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { UsuariosService } from '../usuarios.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-usuario-formulario',
@@ -12,7 +11,7 @@ export class UsuarioFormularioComponent {
 
   formulario!: FormGroup;
 
-  constructor(private usuarioService: UsuariosService, private route: Router, private formBuilder: FormBuilder) {
+  constructor(private usuarioService: UsuariosService, private formBuilder: FormBuilder) {
     this.formulario = this.formBuilder.group({
       nome: ['', [Validators.required]],
       email: ['', [Validators.required]],
