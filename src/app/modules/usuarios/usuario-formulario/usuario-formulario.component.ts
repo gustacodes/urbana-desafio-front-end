@@ -10,6 +10,7 @@ import { UsuariosService } from '../usuarios.service';
 export class UsuarioFormularioComponent {
 
   formulario!: FormGroup;
+  emailEmUso?: boolean
 
   constructor(private usuarioService: UsuariosService, private formBuilder: FormBuilder) {
     this.formulario = this.formBuilder.group({
@@ -46,7 +47,7 @@ export class UsuarioFormularioComponent {
     },
 
       (error) => {
-        alert('Falha ao cadastrar usuario' + JSON.stringify(error));
+        this.emailEmUso = true
       }
 
     )

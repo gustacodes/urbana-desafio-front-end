@@ -35,12 +35,9 @@
                                 <button type="submit" class="btn btn-success" (click)="alterarStatusCartao(usuario?.id, cartao.id)">Ativar Cartão</button> 
                             </ng-template>
                             <button type="submit" class="btn btn-danger" (click)="removerCartao(usuario?.id, cartao.id)">Remover Cartão</button>
-                            
-                        </div>
-    
+                        </div>    
                     </div>
-                </cdk-virtual-scroll-viewport>
-                
+                </cdk-virtual-scroll-viewport>                
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#exampleModal"
                         href="#">Novo Cartão</button>

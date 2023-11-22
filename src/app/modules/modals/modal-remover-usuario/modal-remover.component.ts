@@ -6,16 +6,17 @@ import { Usuario } from 'src/app/interfaces/Usuario';
   templateUrl: './modal-remover.component.html',
   styleUrls: ['./modal-remover.component.css']
 })
+
 export class ModalRemoverUsuarioComponent {
 
   @Input() usuario?: Usuario
-  @Output() removerUsuario = new EventEmitter<void>();
+  @Output() remover = new EventEmitter<void>();
   users?: Usuario []
 
   constructor() {}
 
   confirmarRemocao() {
-    this.removerUsuario.emit();
+    this.remover.emit();
   }
 
 }

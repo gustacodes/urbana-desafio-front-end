@@ -22,6 +22,9 @@
                         <div class="erro-validacao" *ngIf="email.invalid && formDir.submitted">
                             <p>E-mail é obrigatório.</p>
                           </div>
+                          <div class="erro-validacao" *ngIf="emailEmUso && formDir.submitted">
+                            <p>E-mail já cadastrado no sistema ou formato inválido.</p>
+                          </div>
                 </div>
                 <div class="mb-3">
                     <label for="recipient-senha" class="col-form-label">Senha:</label>

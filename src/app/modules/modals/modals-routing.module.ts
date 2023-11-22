@@ -5,6 +5,7 @@ import { ModalRemoverUsuarioComponent } from './modal-remover-usuario/modal-remo
 import { ModalNovoCartaoComponent } from './modal-novo-cartao/modal-novo-cartao.component';
 
 const routes: Routes = [
+  
   {
     path: 'remover',
     component: ModalRemoverUsuarioComponent,
