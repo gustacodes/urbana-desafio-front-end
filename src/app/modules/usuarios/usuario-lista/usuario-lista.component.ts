@@ -15,7 +15,7 @@ export class UsuarioListaComponent {
 
   constructor(private usuarioService: UsuariosService) {}
 
-  ngOnInit() {    
+  ngOnInit() {   
     this.listaUsuarios()
   }
   

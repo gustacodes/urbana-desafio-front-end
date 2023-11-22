@@ -15,7 +15,7 @@ export class ModalsService {
 
   constructor(private http: HttpClient) { }
 
-  novoCartao(id?: number, cartao?: Cartao) {
+  novoCartao(id?: number, cartao?: Cartao): Observable<Usuario> {
     return this.http.post<Usuario>(`${this.URL}/usuarios/${id}/cartoes`, cartao);
   }
 
@@ -25,6 +25,10 @@ export class ModalsService {
 
   removerCartao(id?:number, idCartao?: number) {
     return this.http.delete(`${this.URL}/usuarios/${id}/cartoes/${idCartao}`)
+  }
+
+  buscarCartoesPorIdUsuario(idUsuario?: number): Observable<Cartao[]> {
+    return this.http.get<Cartao[]>(`${this.URL}/usuarios/${idUsuario}/cartoes`);
   }
 
 }

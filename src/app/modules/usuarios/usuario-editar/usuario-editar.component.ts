@@ -29,11 +29,11 @@ export class UsuarioEditarComponent {
 
   atualizarUsuario(id?: number) {
 
-    this.service.atualizarUsuario(id, this.form.value).subscribe(() => {
+    this.service.atualizarUsuario(id, this.form.value).subscribe(() => {      
       location.reload()
     },
 
-      (error) => {
+      (error) => {        
         this.emailEmUso = true;
       }
 

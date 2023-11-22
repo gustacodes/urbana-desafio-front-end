@@ -30,9 +30,9 @@
                             </ng-template>
                         </h5>
                         <div class="botao-cartao">
-                            <button type="submit" class="btn btn-warning" *ngIf="cartao.status; else desativado" (click)="statusCartao(usuario?.id, cartao.id)">Desativar Cartão</button>
+                            <button type="submit" class="btn btn-warning" *ngIf="cartao.status; else desativado" (click)="alterarStatusCartao(usuario?.id, cartao.id)">Desativar Cartão</button>
                             <ng-template #desativado>
-                                <button type="submit" class="btn btn-success" (click)="statusCartao(usuario?.id, cartao.id)">Ativar Cartão</button> 
+                                <button type="submit" class="btn btn-success" (click)="alterarStatusCartao(usuario?.id, cartao.id)">Ativar Cartão</button> 
                             </ng-template>
                             <button type="submit" class="btn btn-danger" (click)="removerCartao(usuario?.id, cartao.id)">Remover Cartão</button>
                             

@@ -16,7 +16,7 @@
             <h1 for="message-text" class="col-form-label">E-mail:</h1>
             <input type="email" formControlName="email" class="form-control" id="recipient-email"/>
             <div class="erro-validacao" *ngIf="emailEmUso && formDir.submitted">
-              <p>E-mail já cadastrado no sistema.</p>
+              <p>E-mail já cadastrado no sistema ou formato inválido.</p>
             </div>
           </div>
           <div class="mb-3">

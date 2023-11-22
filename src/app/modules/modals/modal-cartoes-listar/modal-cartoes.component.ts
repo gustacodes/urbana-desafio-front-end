@@ -12,12 +12,16 @@ import { Cartao } from 'src/app/interfaces/Cartao';
 export class ModalCartoesComponent {
 
   @Input() usuario?: Usuario;
-  cartoes: Cartao [] = []
+  cartoes?: Cartao [];
 
   constructor(private service: ModalsService) { }
 
-  statusCartao(id?: number, idCartao?: number) {
-    this.service.alterarStatusDoCartao(id, idCartao).subscribe((status) => {
+  ngOnInit() {
+   
+  }
+
+  alterarStatusCartao(idUsuario?: number, idCartao?: number) {
+    this.service.alterarStatusDoCartao(idUsuario, idCartao).subscribe((status) => {
       location.reload()
     })
   }
