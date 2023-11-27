@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { ModalsModule } from './modules/modals/modals.module';
 import { HeaderComponent } from './modules/header/header.component';
 import { CartoesModule } from './modules/cartoes/cartoes.module';
+import { LoginModule } from './modules/login/login.module';
 
 
 
@@ -22,6 +23,7 @@ import { CartoesModule } from './modules/cartoes/cartoes.module';
     UsuariosModule,
     ModalsModule,
     CartoesModule,
+    LoginModule,
     AppRoutingModule,
     CommonModule
   ],

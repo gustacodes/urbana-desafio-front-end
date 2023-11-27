@@ -3,23 +3,27 @@ import { RouterModule, Routes } from '@angular/router';
 import { UsuarioListaComponent } from './usuario-lista/usuario-lista.component';
 import { UsuarioFormularioComponent } from './usuario-formulario/usuario-formulario.component';
 import { UsuarioEditarComponent } from './usuario-editar/usuario-editar.component';
+import { AuthGuard } from 'src/app/auth.guard';
 
 const routes: Routes = [
 
+
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+
   {
     path: 'cadastrar',
-    component: UsuarioFormularioComponent,
+    component: UsuarioFormularioComponent, canActivate: [AuthGuard]
   },
 
   {
     path: 'editar',
-    component: UsuarioEditarComponent,
+    component: UsuarioEditarComponent, canActivate: [AuthGuard]
 
   },
 
   {
     path: '',
-    component: UsuarioListaComponent,
+    component: UsuarioListaComponent, canActivate: [AuthGuard]
   },
   
 ];
