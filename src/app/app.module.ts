@@ -9,6 +9,8 @@ import { ModalsModule } from './modules/modals/modals.module';
 import { HeaderComponent } from './modules/header/header.component';
 import { CartoesModule } from './modules/cartoes/cartoes.module';
 import { LoginModule } from './modules/login/login.module';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorsInterceptor } from './interceptors.interceptor';
 
 
 
@@ -28,7 +30,13 @@ import { LoginModule } from './modules/login/login.module';
     CommonModule
   ],
 
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorsInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 

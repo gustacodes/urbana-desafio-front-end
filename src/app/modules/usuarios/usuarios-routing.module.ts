@@ -4,11 +4,14 @@ import { UsuarioListaComponent } from './usuario-lista/usuario-lista.component';
 import { UsuarioFormularioComponent } from './usuario-formulario/usuario-formulario.component';
 import { UsuarioEditarComponent } from './usuario-editar/usuario-editar.component';
 import { AuthGuard } from 'src/app/auth.guard';
+import { LoginComponent } from '../login/login.component';
 
 const routes: Routes = [
-
-
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
 
   {
     path: 'cadastrar',
@@ -22,9 +25,11 @@ const routes: Routes = [
   },
 
   {
-    path: '',
-    component: UsuarioListaComponent, canActivate: [AuthGuard]
+    path: 'lista',
+    component: UsuarioListaComponent,  canActivate: [AuthGuard]
   },
+
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   
 ];
 

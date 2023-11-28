@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
 
   {
-    path: '',
+    path: 'lista',
     component: CartoesComponent, canActivate: [AuthGuard]
   },
   
