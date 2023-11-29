@@ -26,7 +26,7 @@ const routes: Routes = [
 
   {
     path: 'lista',
-    component: UsuarioListaComponent,  canActivate: [AuthGuard]
+    component: UsuarioListaComponent,  canActivate: [AuthGuard],
   },
 
   { path: '', redirectTo: '/login', pathMatch: 'full' },

@@ -1,14 +1,16 @@
-  <div class="login">
-    <form [formGroup]="form" (ngSubmit)="logar()">
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">E-mail</label>
-        <input type="text" formControlName="login" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">E-mail utilizado no cadastro.</div>
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Senha</label>
-        <input type="password" formControlName="senha" class="form-control" id="exampleInputPassword1">
-      </div>
-      <button type="submit" class="btn btn-primary">Entrar</button>
-    </form>
-  </div>
+
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="logar()" id="form" autocomplete="off">
+    <h1 id="message">Login</h1><small id="smallMessage"> </small>
+    <div class="field">
+      <input id="email" formControlName="login" type="email" name="email" placeholder="Email" autocomplete="off"/>
+      <label for="email">Email</label>
+    </div>
+    <div class="field">
+      <input id="password" formControlName="senha" type="password" name="password" placeholder="Password" autocomplete="new-password"/>
+      <label for="password">Senha</label>
+    </div>
+    <button id="submit">Logar</button>
+    
+  </form>
+</div>

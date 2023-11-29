@@ -11,7 +11,7 @@ import { environment } from 'src/environments/enviroment';
 export class LoginService {
 
   private URL = environment.apiUrl;
-  private token = ''
+  private token = 'token'
 
   constructor(private http: HttpClient, private route: Router) { }
 

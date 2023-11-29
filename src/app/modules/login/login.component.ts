@@ -21,8 +21,7 @@ export class LoginComponent {
   }
 
   logar() {
-    this.service.autenticacao(this.form.value).subscribe((log) => {      
-      localStorage.setItem('token', log.token)
+    this.service.autenticacao(this.form.value).subscribe((log) => {
       this.route.navigate(['/usuarios/lista']);
     })
   }
