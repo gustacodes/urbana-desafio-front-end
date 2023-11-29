@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoginService } from './login.service';
-import { User } from 'src/app/interfaces/User';
 import { Router } from '@angular/router';
 
 @Component({
@@ -22,8 +21,8 @@ export class LoginComponent {
   }
 
   logar() {
-    this.service.autenticacao(this.form.value).subscribe((log) => {
-      localStorage.setItem('token', log.token)      
+    this.service.autenticacao(this.form.value).subscribe((log) => {      
+      localStorage.setItem('token', log.token)
       this.route.navigate(['/usuarios/lista']);
     })
   }
